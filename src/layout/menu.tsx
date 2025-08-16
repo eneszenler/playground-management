@@ -1,11 +1,12 @@
 import {ForwardRefExoticComponent, RefAttributes} from "react"
 import {Home, User, Settings, LucideProps} from "lucide-react"
 
-type MenuType = {
+export type MenuType = {
     title: string
     url: string
     icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>
     type: 'Main' | 'Secondary'
+    children?: MenuType[]
 }
 
 export const menu: MenuType[] = [

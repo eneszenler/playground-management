@@ -1,6 +1,5 @@
-import {ForwardRefExoticComponent, RefAttributes} from "react"
-
-import {Building2, LucideProps} from "lucide-react"
+import {useLocation, useNavigate} from "react-router-dom"
+import {Building2} from "lucide-react"
 
 import {
     Sidebar,
@@ -12,19 +11,14 @@ import {
     SidebarMenuButton,
     SidebarMenuItem,
 } from "@/components/ui/sidebar"
-import {useLocation, useNavigate} from "react-router-dom";
+import {MenuType} from "@/layout/menu"
 
-type Props = {
-    menu: {
-        title: string
-        url: string
-        icon: ForwardRefExoticComponent<Omit<LucideProps, "ref"> & RefAttributes<SVGSVGElement>>
-        type: 'Main' | 'Secondary'
-    }[]
+type Props = React.ComponentProps<typeof Sidebar> & {
+    menu: MenuType[]
 }
 
 export function AppSidebar(props: Props) {
-    const {menu} = props
+    const {menu, ...rest} = props
 
     const location = useLocation()
     const navigate = useNavigate()
@@ -39,7 +33,7 @@ export function AppSidebar(props: Props) {
     }
 
     return (
-        <Sidebar>
+        <Sidebar {...rest}>
             <SidebarHeader>
                 <SidebarMenu>
                     <SidebarMenuItem>
