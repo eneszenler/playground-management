@@ -1,13 +1,11 @@
 import {Outlet} from 'react-router-dom'
 
-// import Layout from "@/layout"
+import Layout from "@/layout"
 
-const App = () => {
+export default function App() {
     return (
-        // <Layout>
+        <Layout>
             <Outlet/>
-        // </Layout>
+        </Layout>
     )
 }
-
-export default App
