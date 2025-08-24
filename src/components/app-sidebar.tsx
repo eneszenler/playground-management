@@ -33,7 +33,7 @@ export function AppSidebar(props: Props) {
     }
 
     return (
-        <Sidebar {...rest}>
+        <Sidebar collapsible="icon" {...rest}>
             <SidebarHeader>
                 <SidebarMenu>
                     <SidebarMenuItem>

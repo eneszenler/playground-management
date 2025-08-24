@@ -10,7 +10,7 @@ export type MenuType = {
 }
 
 export const menu: MenuType[] = [
-    {title: "Home", url: "/", icon: Home, type: 'Main'},
+    {title: "Active Sessions", url: "/", icon: Home, type: 'Main'},
     {title: "Subscribers", url: "/subscribers", icon: User, type: 'Main'},
     {title: "Settings", url: "/settings", icon: Settings, type: 'Secondary'}
 ]

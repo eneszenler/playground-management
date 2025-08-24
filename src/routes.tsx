@@ -1,12 +1,12 @@
-import HomePage from "@/pages/home/page"
+import ActiveSessionsPage from "@/pages/active-sessions/page"
 import SubscribersPage from "@/pages/subscribers/page"
 import SettingsPage from "@/pages/settings/page"
 
 export const routes = [
     {
-        id: "home",
+        id: "active-sessions",
         path: "/",
-        element: <HomePage/>
+        element: <ActiveSessionsPage/>
     },
     {
         id: "subscribers",
