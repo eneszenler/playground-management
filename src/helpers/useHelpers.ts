@@ -10,7 +10,12 @@ export default function useHelpers() {
         }).format(price) : undefined
     }
 
+    const formatFullName = (firstName?: string, lastName?: string) => {
+        return [firstName, lastName].filter(Boolean).join(' ')
+    }
+
     return {
-        formatPrice
+        formatPrice,
+        formatFullName,
     }
 }
